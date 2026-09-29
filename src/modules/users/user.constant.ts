@@ -1,3 +1,5 @@
+import config from "../../config/index.js";
+
 export const USER_STATUS = {
   ACTIVE: "ACTIVE",
   BLOCKED: "BLOCKED",
@@ -8,3 +10,4 @@ export const USER_ROLE = {
   USER: "USER",
 } as const;
 
+export const defaultProfileImage = config.default_profile_image || "https://i.ibb.co/7nssn2D/au4.jpg";
