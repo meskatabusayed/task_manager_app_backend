@@ -1,12 +1,12 @@
 import type { NextFunction, Request, Response } from "express";
-import { USER_STATUS } from "../modules/users/user.constant.js";
+import { USER_ROLE, USER_STATUS } from "../modules/users/user.constant.js";
 import jwt, { type JwtPayload } from "jsonwebtoken";
 import config from "../config/index.js";
 import { User } from "../modules/users/user.model.js";
 
 
 
-export const auth = (...requiredRoles : (keyof typeof USER_STATUS)[]) => {
+export const auth = (...requiredRoles : (keyof typeof USER_ROLE)[]) => {
     return async (
         req : Request,
         res : Response,
@@ -17,7 +17,7 @@ export const auth = (...requiredRoles : (keyof typeof USER_STATUS)[]) => {
             const authorization = req.headers.authorization;
 
             if(!authorization){
-                throw new Error("You are not authorized");
+                throw new Error("You are not authorizedd");
 
             }
 
