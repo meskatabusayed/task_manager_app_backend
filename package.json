@@ -14,7 +14,7 @@
   "type": "module",
   "main": "./dist/server.js",
   "scripts": {
-     "start:prod": "node ./dist/server.js",
+    "start:prod": "node ./dist/server.js",
     "start:dev": "tsx watch ./src/server.ts",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
@@ -25,10 +25,12 @@
   },
   "dependencies": {
     "@types/cors": "^2.8.19",
+    "bcryptjs": "^3.0.3",
     "cors": "^2.8.6",
     "dotenv": "^18.0.3",
     "express": "^5.2.1",
-    "mongoose": "^9.10.2"
+    "mongoose": "^9.10.2",
+    "zod": "^4.6.5"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

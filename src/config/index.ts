@@ -4,6 +4,6 @@ dotenv.config();
 export default {
   port: process.env.PORT || 5000,
   db_url: process.env.DB_URL,
-  default_profile_image : process.env.DEFAULT_PROFILE_IMAGE,
-  
+  default_profile_image: process.env.DEFAULT_PROFILE_IMAGE,
+  bcrypt_salt_rounds: process.env.BCRYPT_SALT_ROUNDS,
 };
